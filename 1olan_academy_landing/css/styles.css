@@ -1,0 +1,211 @@
+/* --- GENERAL --- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; padding: 0;
+  background: #f8f9fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* --- HEADER --- */
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #7B2E2E;
+  color: white;
+}
+.header img { height: 80px; }
+.header-text h1 { margin: 0; font-size: 28px; }
+.nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav a:hover { text-decoration: underline; }
+
+/* --- HERO --- */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #e9ecef;
+}
+.hero h1 { font-size: 2rem; margin-bottom: 10px; }
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #7B2E2E;
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+.btn:hover { background: #5c2020; }
+
+/* --- ABOUT --- */
+.about {
+  padding: 40px;
+  text-align: center;
+}
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+.feature {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* --- SCHOOL VIEW --- */
+.school-view {
+  text-align: center;
+  padding: 40px;
+}
+.school-view img {
+  max-width: 800px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* --- SLIDESHOW --- */
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+.slide { display: none; }
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+  transition: opacity 1s ease-in-out;
+}
+/* Arrows */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+}
+.prev { left: 0; }
+.next { right: 0; }
+/* Dots */
+.dots-container {
+  text-align: center;
+  margin-top: 15px;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+.dot.active { background-color: #7B2E2E; }
+
+/* --- LIGHTBOX --- */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+}
+#lightbox-caption {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.close {
+  position: absolute;
+  top: 20px; right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.lightbox-prev, .lightbox-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  user-select: none;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+}
+.lightbox-prev { left: 0; }
+.lightbox-next { right: 0; }
+
+/* --- ENQUIRY --- */
+.enquiry { padding: 40px; text-align: center; }
+.enquiry iframe { width: 100%; height: 800px; border: none; border-radius: 8px; }
+
+/* --- CONTACT --- */
+.contact { padding: 40px; text-align: center; }
+
+/* --- FOOTER --- */
+.footer { text-align: center; padding: 20px; background: #7B2E2E; color: white; }
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+  /* Slideshow container smaller margins */
+  .slideshow-container { max-width: 100%; margin: auto; }
+
+  /* Make images fit width */
+  .slide img { border-radius: 8px; }
+
+  /* Make arrows larger and easier to tap */
+  .prev, .next {
+    font-size: 30px;
+    padding: 12px;
+  }
+
+  /* Dots smaller for mobile */
+  .dot { height: 12px; width: 12px; margin: 0 3px; }
+
+  /* Lightbox image smaller */
+  .lightbox-content { max-width: 95%; max-height: 70%; }
+
+  /* Lightbox arrows bigger */
+  .lightbox-prev, .lightbox-next { font-size: 35px; padding: 12px; }
+  
+  /* Close button smaller */
+  .close { font-size: 35px; top: 15px; right: 20px; }
+}
+
+@media (max-width: 480px) {
+  /* Smaller devices adjustments */
+  .hero h1 { font-size: 1.5rem; }
+  .btn { padding: 8px 16px; font-size: 14px; }
+  .header-text h1 { font-size: 22px; }
+  .features { grid-template-columns: 1fr; }
+}

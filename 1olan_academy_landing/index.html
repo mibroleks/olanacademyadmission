@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olan Academy – Admissions Enquiry</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo"><img src="images/student_logo.png" alt="Olan Academy Logo"></div>
+    <div class="header-text">
+      <h1>Olan Academy</h1>
+      <p><em>Motto: Hard-work, Dedication & Service</em></p>
+      <p><strong>Day & Boarding, BECE, WAEC and NECO Approved</strong></p>
+    </div>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#enquiry">Enquiry</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Nurturing Excellence, Inspiring Futures</h1>
+    <p>Welcome to Olan Academy – where we build character, creativity, and confidence.</p>
+    <a href="#enquiry" class="btn">Make an Enquiry</a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>Why Choose Olan Academy?</h2>
+    <div class="features">
+      <div class="feature">📚 Excellence in Academics</div>
+      <div class="feature">🌱 Holistic Development</div>
+      <div class="feature">🏫 Modern Facilities</div>
+      <div class="feature">🤝 Caring Teachers</div>
+      <div class="feature">👨‍👩‍👧 Strong Community</div>
+    </div>
+  </section>
+
+  <!-- SCHOOL VIEW -->
+  <section class="school-view">
+    <h2>📸 Our School Inside View</h2>
+    <img src="images/school.jpg" alt="School Inside View">
+  </section>
+
+  <!-- FACILITIES GALLERY -->
+  <section id="gallery" class="gallery">
+    <h2>📸 Our Facilities</h2>
+    <div class="slideshow-container">
+      <div class="slide fade"><img src="images/play.jpg" alt="Playground" onclick="openLightbox(0)"></div>
+      <div class="slide fade"><img src="images/chemistrylab2.jpg" alt="Chemistry Lab" onclick="openLightbox(1)"></div>
+      <div class="slide fade"><img src="images/classroom.jpg" alt="Classroom" onclick="openLightbox(2)"></div>
+      <div class="slide fade"><img src="images/home.jpg" alt="H/Econs Lab" onclick="openLightbox(3)"></div>
+      <div class="slide fade"><img src="images/ictlab.jpg" alt="ICT Lab" onclick="openLightbox(4)"></div>
+      <div class="slide fade"><img src="images/music.jpg" alt="Music Room" onclick="openLightbox(5)"></div>
+
+      <!-- Arrows -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Dots -->
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="lightbox-caption"></div>
+    <a class="lightbox-prev" onclick="changeLightbox(-1)">&#10094;</a>
+    <a class="lightbox-next" onclick="changeLightbox(1)">&#10095;</a>
+  </div>
+
+  <!-- ENQUIRY FORM -->
+  <section id="enquiry" class="enquiry">
+    <h2>📝 Admissions Enquiry Form</h2>
+    <p>Please complete the form below. Our admissions team will contact you shortly.</p>
+    <iframe 
+      src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAoeOtW1UQ0YxN1E1NzRLWjc0VTBVNkdSNUtQV0taNC4u&embed=true" 
+      frameborder="0" marginheight="0" marginwidth="0">
+    </iframe>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>📞 Contact Us</h2>
+    <p><strong>Phone/WhatsApp:</strong> +2349020069581, +2349077662387, +2349027721880, +2348030458442</p>
+    <p><strong>Email:</strong> olanacademy@gmail.com</p>
+    <p><strong>Address:</strong> Kilometre 8, Atan/Ado-Odo Road, Ado-Odo Otta L.G., Ogun State, Nigeria.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© <script>document.write(new Date().getFullYear())</script> Olan Academy | All Rights Reserved</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>
